@@ -13,7 +13,7 @@ type ContactFormType = {
 const ContactForm = ({ lang }: ContactFormType) => {
   const pathname = usePathname();
 
-  const [state, handleSubmit] = useForm("mrgwnngw");
+  const [state, handleSubmit] = useForm("xjvnrjzk");
   const [phoneNum, setPhoneNum] = useState("");
 
   const country = pathname.split("/")[1];
