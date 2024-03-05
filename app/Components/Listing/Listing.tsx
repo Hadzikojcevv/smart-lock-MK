@@ -81,7 +81,7 @@ export const locks: LockType[] = [
         icon: "https://i.imgur.com/twMtpe6.png",
       },
       {
-        title: "Подсетник за замена на батерија",
+        title: "Потсетник за замена на батерија",
         titleEng: "Low Battery Reminder",
         icon: "https://i.imgur.com/GrNGYiM.png",
       },
@@ -123,7 +123,7 @@ export const locks: LockType[] = [
         icon: "https://i.imgur.com/twMtpe6.png",
       },
       {
-        title: "Подсетник за замена на батерија",
+        title: "Потсетник за замена на батерија",
         titleEng: "Low Battery Reminder",
         icon: "https://i.imgur.com/GrNGYiM.png",
       },
@@ -165,7 +165,7 @@ export const locks: LockType[] = [
         icon: "https://i.imgur.com/pic3npc.png",
       },
       {
-        title: "Подсетник за замена на батерија",
+        title: "Потсетник за замена на батерија",
         titleEng: "Low Battery Reminder",
         icon: "https://i.imgur.com/GrNGYiM.png",
       },
@@ -227,7 +227,7 @@ export const locks: LockType[] = [
         icon: "https://i.imgur.com/8b3R4Fc.png",
       },
       {
-        title: "Подсетник за замена на батерија",
+        title: "Потсетник за замена на батерија",
         titleEng: "Low Battery Reminder",
         icon: "https://i.imgur.com/GrNGYiM.png",
       },
@@ -289,7 +289,7 @@ export const locks: LockType[] = [
         icon: "https://i.imgur.com/8b3R4Fc.png",
       },
       {
-        title: "Подсетник за замена на батерија",
+        title: "Потсетник за замена на батерија",
         titleEng: "Low Battery Reminder",
         icon: "https://i.imgur.com/GrNGYiM.png",
       },
@@ -351,7 +351,7 @@ export const locks: LockType[] = [
         icon: "https://i.imgur.com/8b3R4Fc.png",
       },
       {
-        title: "Подсетник за замена на батерија",
+        title: "Потсетник за замена на батерија",
         titleEng: "Low Battery Reminder",
         icon: "https://i.imgur.com/GrNGYiM.png",
       },
