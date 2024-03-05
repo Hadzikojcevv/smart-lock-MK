@@ -34,7 +34,7 @@ export const locks: LockType[] = [
         icon: "https://i.imgur.com/eSGcUPE.png",
       },
       {
-        title: "Подсетник за замена на батерија",
+        title: "Потсетник за замена на батерија",
         titleEng: "Low Battery Reminder",
         icon: "https://i.imgur.com/GrNGYiM.png",
       },
