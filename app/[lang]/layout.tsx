@@ -9,7 +9,10 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Smart Locks',
-  description: 'Smart Locks'
+  description: 'Smart Locks',
+  verification: {
+    google: 'google-site-verification=xn42v-FLIfIHEWwy5yeFzIJ0qUk9ydfwXWAhVQmZ12Y'
+  }
 }
 
 export async function generateStaticParams() {
