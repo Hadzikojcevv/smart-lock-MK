@@ -6,14 +6,16 @@ import Image from "next/image";
 import Link from "next/link";
 import Icon from "./Icon";
 import DescriptionListing from "./DescriptionListing";
+import Price from "./Price";
 
 type LockItemProps = {
   lock: LockType;
   index: number;
-  lang: any
+  lang: any;
+  page: 'home' | "products"
 };
 
-const LockItem = ({ lock: { title, desc, image }, index, lang }: LockItemProps) => {
+const LockItem = ({ lock: { title, desc, image, price }, index, lang, page }: LockItemProps) => {
   return (
     <div className={`relative m-auto`}>
       <div className="m-auto w-full flex flex-col lg:flex-row justify-between gap-8 md:gap-10 lg:gap-12 items-center py-12">
@@ -51,6 +53,9 @@ const LockItem = ({ lock: { title, desc, image }, index, lang }: LockItemProps) 
             </div>
 
               <DescriptionListing items={desc} lang={lang}/>
+
+            {page === 'products' && <Price price={price} lang={lang}/>}
+              
             
             <Link
               href={"#form"}

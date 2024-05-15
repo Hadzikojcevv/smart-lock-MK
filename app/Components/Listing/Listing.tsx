@@ -7,6 +7,7 @@ export const locks: LockType[] = [
     id: 1,
     title: "F8-TX",
     image: "https://i.imgur.com/lhgXnJf.png",
+    price: 7300,
     desc: [
       {
         title: "Отисок На Прсти",
@@ -44,6 +45,7 @@ export const locks: LockType[] = [
     id: 2,
     title: "CJ001",
     image: "https://i.imgur.com/y20I0tw.png",
+    price: 5500,
     desc: [
       {
         title: "Отисок На Прсти",
@@ -91,6 +93,7 @@ export const locks: LockType[] = [
     id: 3,
     title: "Q1 - Ball Lock",
     image: "https://i.imgur.com/bTof0hd.png",
+    price: 6500,
     desc: [
       {
         title: "Отисок На Прсти",
@@ -133,6 +136,7 @@ export const locks: LockType[] = [
     id: 4,
     title: "D10",
     image: "https://i.imgur.com/hCXy2VY.png",
+    price: 9600,
     desc: [
       {
         title: "Отисок На Прсти",
@@ -175,6 +179,7 @@ export const locks: LockType[] = [
     id: 5,
     title: "SL ID 1",
     image: "https://i.imgur.com/2geCyBS.png",
+    price: 15900,
     desc: [
       {
         title: "3D Препознавање на Лице",
@@ -237,6 +242,7 @@ export const locks: LockType[] = [
     id: 6,
     title: "SL ID 2",
     image: "https://i.imgur.com/bN0je9U.png",
+    price: 15900,
     desc: [
       {
         title: "3D Препознавање на Лице",
@@ -299,6 +305,7 @@ export const locks: LockType[] = [
     id: 7,
     title: "SL ID 3",
     image: "https://i.imgur.com/HT0Vh4e.png",
+    price: 23000,
     desc: [
       {
         title: "3D Препознавање на Лице",
@@ -361,13 +368,14 @@ export const locks: LockType[] = [
 
 type ListingPropsType = {
   lang: any;
+  page: 'home' | "products"
 };
 
-const Listing = ({ lang }: ListingPropsType) => {
+const Listing = ({ lang, page}: ListingPropsType) => {
   return (
     <section>
       {locks.map((lock, idx: number) => (
-        <LockItem key={lock.id} lock={lock} index={idx} lang={lang} />
+        <LockItem key={lock.id} lock={lock} index={idx} lang={lang} page={page}/>
       ))}
     </section>
   );

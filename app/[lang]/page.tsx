@@ -14,7 +14,7 @@ export default async function Home({
   return (
     <>
 
-      <Listing lang={page}/>
+      <Listing lang={page} page="home"/>
       <Form lang={page} />
     </>
   );
