@@ -7,6 +7,7 @@ export const locks: LockType[] = [
     id: 1,
     title: "F8-TX",
     image: "https://i.imgur.com/lhgXnJf.png",
+    cardImage: 'https://i.imgur.com/4y59wvm.png',
     price: 7300,
     desc: [
       {
@@ -45,6 +46,7 @@ export const locks: LockType[] = [
     id: 2,
     title: "CJ001",
     image: "https://i.imgur.com/y20I0tw.png",
+    cardImage: 'https://i.imgur.com/USabdiG.png',
     price: 5500,
     desc: [
       {
@@ -93,6 +95,7 @@ export const locks: LockType[] = [
     id: 3,
     title: "Q1 - Ball Lock",
     image: "https://i.imgur.com/bTof0hd.png",
+    cardImage: 'https://i.imgur.com/USabdiG.png',
     price: 6500,
     desc: [
       {
@@ -136,6 +139,7 @@ export const locks: LockType[] = [
     id: 4,
     title: "D10",
     image: "https://i.imgur.com/hCXy2VY.png",
+    cardImage: 'https://i.imgur.com/66iIXpo.png',
     price: 9600,
     desc: [
       {
@@ -179,6 +183,7 @@ export const locks: LockType[] = [
     id: 5,
     title: "SL ID 1",
     image: "https://i.imgur.com/2geCyBS.png",
+    cardImage: 'https://i.imgur.com/DE8uEOB.png',
     price: 15900,
     desc: [
       {
@@ -242,6 +247,8 @@ export const locks: LockType[] = [
     id: 6,
     title: "SL ID 2",
     image: "https://i.imgur.com/bN0je9U.png",
+    cardImage: 'https://i.imgur.com/66iIXpo.png',
+
     price: 15900,
     desc: [
       {
@@ -305,6 +312,8 @@ export const locks: LockType[] = [
     id: 7,
     title: "SL ID 3",
     image: "https://i.imgur.com/HT0Vh4e.png",
+    cardImage: 'https://i.imgur.com/66iIXpo.png',
+
     price: 23000,
     desc: [
       {

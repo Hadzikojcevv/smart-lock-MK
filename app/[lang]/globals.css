@@ -5,18 +5,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #e9e9ea;
-  font-family: "Montserrat", sans-serif;
-  padding-top: 105px;
+  /* background-color: #e9e9ea;  ORIGINAL */
+  background-color: #FFFFFF;
+  font-family: "K2D", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  /* padding-top: 105px; */
 }
 
 .bodyBG {
@@ -47,6 +51,12 @@ body {
 
 .freedokaFont {
   font-family: "Fredoka", sans-serif;
+}
+
+.k2d-bold {
+  font-family: "K2D", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .border {
@@ -147,3 +157,29 @@ footer {
     width: 100%;
   }
 }
+
+/* NEW DESIGN */
+
+.heroSection {
+  background-image: url("../../public/heroBack.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+}
+
+.heroOverlay {
+  height: 100%;
+  width: 100%;
+  background-color: #2b2b2bb9;
+}
+
+.featuresSection{
+  background-image: url("../../public/featuresBgt.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+
