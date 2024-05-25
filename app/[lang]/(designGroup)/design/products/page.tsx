@@ -1,0 +1,16 @@
+import Footer from '@/app/Components/Design/Footer/Footer'
+import Nav from '@/app/Components/Design/Nav'
+import ProductsListing from '@/app/Components/Design/Products/ProductsListing'
+import React from 'react'
+
+const ProductsPage = () => {
+  return (
+    <>
+        <Nav darkColor/>
+        <ProductsListing />
+        <Footer />
+    </>
+  )
+}
+
+export default ProductsPage

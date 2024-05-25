@@ -9,6 +9,7 @@ export const locks: LockType[] = [
     image: "https://i.imgur.com/lhgXnJf.png",
     cardImage: 'https://i.imgur.com/4y59wvm.png',
     price: 7300,
+    tag: "Most Popular",
     desc: [
       {
         title: "Отисок На Прсти",
@@ -48,6 +49,8 @@ export const locks: LockType[] = [
     image: "https://i.imgur.com/y20I0tw.png",
     cardImage: 'https://i.imgur.com/USabdiG.png',
     price: 5500,
+    tag: "Simplest",
+
     desc: [
       {
         title: "Отисок На Прсти",
@@ -97,6 +100,8 @@ export const locks: LockType[] = [
     image: "https://i.imgur.com/bTof0hd.png",
     cardImage: 'https://i.imgur.com/lQAPehS.png',
     price: 6500,
+    tag: "Unique",
+
     desc: [
       {
         title: "Отисок На Прсти",
@@ -141,6 +146,8 @@ export const locks: LockType[] = [
     image: "https://i.imgur.com/hCXy2VY.png",
     cardImage: 'https://i.imgur.com/66iIXpo.png',
     price: 9600,
+    tag: "Slick",
+
     desc: [
       {
         title: "Отисок На Прсти",
@@ -185,6 +192,8 @@ export const locks: LockType[] = [
     image: "https://i.imgur.com/2geCyBS.png",
     cardImage: 'https://i.imgur.com/DE8uEOB.png',
     price: 15900,
+    tag: "Face Recognition",
+
     desc: [
       {
         title: "3D Препознавање на Лице",
@@ -249,6 +258,8 @@ export const locks: LockType[] = [
     image: "https://i.imgur.com/bN0je9U.png",
     cardImage: 'https://i.imgur.com/a5YcqGl.png',
     price: 15900,
+    tag: "Face Recognition",
+
     desc: [
       {
         title: "3D Препознавање на Лице",
@@ -313,6 +324,8 @@ export const locks: LockType[] = [
     image: "https://i.imgur.com/HT0Vh4e.png",
     cardImage: 'https://i.imgur.com/HZWNstW.png',
     price: 23000,
+    tag: "New",
+
     desc: [
       {
         title: "3D Препознавање на Лице",

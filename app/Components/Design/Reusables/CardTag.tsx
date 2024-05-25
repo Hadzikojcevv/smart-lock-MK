@@ -9,7 +9,7 @@ type CardTagPropsType = {
 const CardTag = ({text, color = 'dark'}: CardTagPropsType) => {
   return (
     <div className={`absolute top-2 right-2 px-6 py-3 rounded-md shadow-lg ${color === 'dark' ? "bg-lightDark text-redesignWhite" : "bg-redesignWhite text-darkText"}`}>
-        <p className={`uppercase text-xl ${fontK2dMedium.className}`}>{text}</p>
+        <p className={`uppercase text-xs ${fontK2dMedium.className}`}>{text}</p>
     </div>
   )
 }

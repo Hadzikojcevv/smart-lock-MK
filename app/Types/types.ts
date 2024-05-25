@@ -12,5 +12,6 @@ export type LockType = {
     image:string,
     cardImage: string,
     price: number,
+    tag: string,
     desc: SingleDescItem[],
 }
