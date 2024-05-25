@@ -95,7 +95,7 @@ export const locks: LockType[] = [
     id: 3,
     title: "Q1 - Ball Lock",
     image: "https://i.imgur.com/bTof0hd.png",
-    cardImage: 'https://i.imgur.com/USabdiG.png',
+    cardImage: 'https://i.imgur.com/lQAPehS.png',
     price: 6500,
     desc: [
       {
@@ -247,8 +247,7 @@ export const locks: LockType[] = [
     id: 6,
     title: "SL ID 2",
     image: "https://i.imgur.com/bN0je9U.png",
-    cardImage: 'https://i.imgur.com/66iIXpo.png',
-
+    cardImage: 'https://i.imgur.com/a5YcqGl.png',
     price: 15900,
     desc: [
       {
@@ -312,8 +311,7 @@ export const locks: LockType[] = [
     id: 7,
     title: "SL ID 3",
     image: "https://i.imgur.com/HT0Vh4e.png",
-    cardImage: 'https://i.imgur.com/66iIXpo.png',
-
+    cardImage: 'https://i.imgur.com/HZWNstW.png',
     price: 23000,
     desc: [
       {

@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col lg:flex-row justify-center gap-x-20 items-center">
             <Image src={logo} alt="Logo" width={200} height={100} />
-            <p className="text-xl">
+            <p className="text-sm md:text-xl text-center">
               <span className="text-lg">Adress:</span> Marshal Tito 123, Gevgelija, Macedonia
             </p>
           </div>

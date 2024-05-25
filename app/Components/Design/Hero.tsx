@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="heroOverlay">
         <Nav />
         <div
-          className="flex w:11/12 lg:w-9/12 m-auto justify-center lg:justify-start w-full h-full lg:h-2/3 lg:pt-20"
+          className="flex w:11/12 lg:w-9/12 m-auto justify-center lg:justify-start w-full lg:h-2/3 lg:pt-20 pt-10"
         >
           <div
             className="text-white w-10/12 lg:w-7/12 m-auto lg:ml-0 text-center lg:text-left relative text-redesignWhite"
