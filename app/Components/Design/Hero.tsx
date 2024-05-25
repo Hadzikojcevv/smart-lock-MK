@@ -30,7 +30,7 @@ const Hero = () => {
               For a Better Home & Business Security
             </p>
             <button
-              className={`py-3 px-6 capitalize lg:text-2xl w-8/12 bg-redesignWhite rounded-full text-dark ${fontK2dRegular.className}`}
+              className={`py-3 px-6 capitalize lg:text-2xl w-8/12 bg-redesignWhite rounded-full text-dark hover:text-redesignWhite hover:bg-lightestdark ease-in-out transition-colors ${fontK2dRegular.className}`}
             >
               View Colection
             </button>

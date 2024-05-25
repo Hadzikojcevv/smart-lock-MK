@@ -12,10 +12,11 @@ const config: Config = {
       'dark': "#474C57",
       "lightestdark":"#edededcb",
       'lightDark': "#6A707C",
+      "footerDark": "#474C57",
       'bg-light': "#E9E9EA",
       'redesignWhite': "#FFFFFF",
       'darkText': "#3A3C41",
-      
+      'lightBlue': "#E4E7ED"
     }
     ,
     extend: {
