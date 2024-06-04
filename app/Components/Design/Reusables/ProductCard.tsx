@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import Btn from "./Btn";
 import { LockType } from "@/app/Types/types";
@@ -8,6 +9,7 @@ import { fontK2dBold, fontK2dMedium } from "../Fonts";
 import blobWhite from "../../../../public/blobWhite.png";
 import blobDark from "../../../../public/blobDark.png";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type ProductCardPropsType = {
   product: LockType;
@@ -15,6 +17,10 @@ type ProductCardPropsType = {
 };
 
 const ProductCard = ({ product, color = "light" }: ProductCardPropsType) => {
+
+  const pathname = usePathname()
+  const isPathnameEng = pathname.includes('/en')
+
   return (
     <div className="p-6">
       <div
@@ -28,7 +34,7 @@ const ProductCard = ({ product, color = "light" }: ProductCardPropsType) => {
             color === "light" ? "text-darkText" : "text-redesignWhite"
           }`}
         >
-          <CardTag text={product.tag} color={color === "light" ? "dark" : "light"} />
+          <CardTag text={isPathnameEng ? product.tagEng : product.tag} color={color === "light" ? "dark" : "light"} />
           <h3 className={`text-4xl ${fontK2dBold.className}`}>
             {product.title}
           </h3>
@@ -40,6 +46,9 @@ const ProductCard = ({ product, color = "light" }: ProductCardPropsType) => {
               }  ${fontK2dMedium.className}`}
             >
               {product.price.toLocaleString("en-EN")}
+            </span>
+            <span className={`text-sm mb-4  ${fontK2dMedium.className}`}>
+              MKD
             </span>
           </p>
           <Link href={`/design/${product.id}`}>

@@ -9,7 +9,10 @@ export const locks: LockType[] = [
     image: "https://i.imgur.com/lhgXnJf.png",
     cardImage: 'https://i.imgur.com/4y59wvm.png',
     price: 7300,
-    tag: "Most Popular",
+    tag: "Блиндор Врати",
+    tagEng: "Blindor",
+    description:"F8-TX е Смарт брава за блиндор врати е идеално и економично решение за апартмани кои се издаваат. Оваа напредна брава нуди повеќе начини за отварање: преку отпечаток од прст, лозинка, механички клуч, Tuya Smart апликација и NFC картичка. Со потсетник за замена на батерија, оваа брава обезбедува постојана функционалност и сигурност. Бравата може да се отвори и од телефон, каде што исто така се поставуваат привремените пинови со одредено времетраење, што е совршено за краткорочно издавање. Дополнително, бравата води лог за тоа кој и кога влегол, обезбедувајќи дополнителна контрола и безбедност за вашето домување.",
+    descriptionEng: "The F8-TX - Smart Lock designed for blinded door use is an ideal and economical solution for apartments that are rented out. This advanced lock offers multiple lock and unlock solutions such as: via fingerprint, password, mechanical key, Tuya Smart app and NFC card. With a battery replacement reminder, this lock ensures constant functionality and reliability. The lock can also be opened from a phone and can provide random pin codes set for a certain duration, which are perfect for short-term use. Additionally, the lock keeps a log of who entered and when, providing additional control and security for your home.",
     desc: [
       {
         title: "Отисок На Прсти",
@@ -49,8 +52,10 @@ export const locks: LockType[] = [
     image: "https://i.imgur.com/y20I0tw.png",
     cardImage: 'https://i.imgur.com/USabdiG.png',
     price: 5500,
-    tag: "Simplest",
-
+    tag: "Собни Врати",
+    tagEng: "Room Doors",
+    description: "CJ001 Смарт бравата  е идеално решение за модернизација и обезбедување на собните врати во вашиот простор. Оваа напредна брава нуди повеќе начини за отварање: преку пин код, отпечаток од прст, NFC картичка или традиционален клуч. Со елегантен дизајн и интуитивна рачка, оваа брава обезбедува високо ниво на сигурност и практичност за канцеларии, хотели, или други простории каде е потребна контролирана пристапност. Лесна за инсталација и употреба, смарт бравата се интегрира со постоечкиот безбедносен систем, обезбедувајќи ви мир и сигурност во секојдневните активности.",
+    descriptionEng: "The CJ001 Smart Lock is an ideal solution for modernizing and securing the room doors in your apartment, home or bussines. This advanced lock offers multiple ways to open: via pin code, fingerprint, NFC card or traditional key. With an elegant design and an intuitive handle, this lock provides a high level of security and convenience for offices, hotels, or other premises where controlled accessibility is required. Easy to install and use, the smart lock integrates with your existing security system, providing you with peace of mind and security in your daily activities.",
     desc: [
       {
         title: "Отисок На Прсти",
@@ -100,8 +105,10 @@ export const locks: LockType[] = [
     image: "https://i.imgur.com/bTof0hd.png",
     cardImage: 'https://i.imgur.com/lQAPehS.png',
     price: 6500,
-    tag: "Unique",
-
+    tag: "Собни Врати",
+    tagEng: "Room Doors",
+    description: "Q1 Смарт бравата  е идеално решение за модернизација и обезбедување на собните врати во вашиот простор. Оваа напредна брава нуди повеќе начини за отварање: преку пин код, отпечаток од прст, NFC картичка или традиционален клуч. Со елегантен дизајн и ергономска топчеста форма, оваа брава обезбедува високо ниво на сигурност и практичност за канцеларии, хотели, или други простории каде е потребна контролирана пристапност. Лесна за инсталација и употреба, смарт бравата се интегрира со постоечкиот безбедносен систем, обезбедувајќи ви мир и сигурност во секојдневните активности.",
+    descriptionEng: "The Q1 Smart Lock is an ideal solution for modernizing and securing the room doors in your space. This advanced lock offers multiple ways to open: via pin code, fingerprint, NFC card or traditional key. With an elegant design and ergonomic spherical shape, this lock provides a high level of security and practicality for offices, hotels, or other premises where controlled accessibility is required. Easy to install and use, the smart lock integrates with your existing security system, providing you with peace of mind and security in your daily activities.",
     desc: [
       {
         title: "Отисок На Прсти",
@@ -146,8 +153,10 @@ export const locks: LockType[] = [
     image: "https://i.imgur.com/hCXy2VY.png",
     cardImage: 'https://i.imgur.com/66iIXpo.png',
     price: 9600,
-    tag: "Slick",
-
+    tag: "PVC & Алуминиумски Врати",
+    tagEng: "PVC & Aluminium Doors",
+    description: "D10 Смарт бравата за ПВЦ врати е идеално решение за канцеларии, домови или апартмани. Оваа напредна брава нуди повеќе начини за отварање: преку отпечаток од прст, лозинка, механички клуч, Tuya Smart апликација и NFC картичка. Со потсетник за замена на батерија, оваа брава обезбедува постојана функционалност и сигурност. Бравата може да се отвори и од телефон, каде што исто така се поставуваат привремените пинови со одредено времетраење, што е совршено за краткорочно издавање. Дополнително, бравата води лог за тоа кој и кога влегол, обезбедувајќи дополнителна контрола и безбедност за вашиот простор.",
+    descriptionEng: "The D10 Smart Lock is designed for PVC doors and is an ideal solution for offices, homes or apartments. This advanced lock offers multiple ways to open: via fingerprint, password, mechanical key, Tuya Smart app and NFC card. With a battery replacement reminder, this lock ensures constant functionality and reliability. The lock can also be opened from a phone, where temporary pins are also set for a certain duration, perfect for short-term issuance. Additionally, the lock keeps a log of who entered and when, providing additional control and security for your space.",
     desc: [
       {
         title: "Отисок На Прсти",
@@ -192,8 +201,10 @@ export const locks: LockType[] = [
     image: "https://i.imgur.com/2geCyBS.png",
     cardImage: 'https://i.imgur.com/DE8uEOB.png',
     price: 15900,
-    tag: "Face Recognition",
-
+    tag: "Блиндор Врати",
+    tagEng: "Blindor",
+    description: null,
+    descriptionEng: null,
     desc: [
       {
         title: "3D Препознавање на Лице",
@@ -258,8 +269,10 @@ export const locks: LockType[] = [
     image: "https://i.imgur.com/bN0je9U.png",
     cardImage: 'https://i.imgur.com/a5YcqGl.png',
     price: 15900,
-    tag: "Face Recognition",
-
+    tag: "Блиндор Врати",
+    tagEng: "Blindor",
+    description: null,
+    descriptionEng: null,
     desc: [
       {
         title: "3D Препознавање на Лице",
@@ -324,8 +337,10 @@ export const locks: LockType[] = [
     image: "https://i.imgur.com/HT0Vh4e.png",
     cardImage: 'https://i.imgur.com/HZWNstW.png',
     price: 23000,
-    tag: "New",
-
+    tag: "Блиндор Врати",
+    tagEng: "Blindor",
+    description: null,
+    descriptionEng: null,
     desc: [
       {
         title: "3D Препознавање на Лице",

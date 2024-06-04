@@ -10,7 +10,23 @@
         "btn": "Contact Us",
         "priceTag": "Price",
         "taxTag": "MKD + Tax",
-
+        "redesign": {
+          "hero": {
+            "title": "Smart Locks",
+            "subTitle": "The Future of Security",
+            "slogan": "For a Better Home & Business Security",
+            "btn":"View Collection"
+          },
+          "productsTitle": "Products",
+          "latestArrivals": {
+            "title": "Latest Arrivals",
+            "subTitle": "Top new products this week" 
+          },
+          "features": {
+            "title": "Features",
+            "subTitle": "Technology Security System"
+          }
+        },
         "form": {
           "title": "Contact Us!",
           "desc": "Let's get in touch!"
@@ -21,6 +37,11 @@
       "contact" : "Contact:",
       "name": "Vlatko Hadzikojcev",
       "tel": "Tel:",
-      "email": "E-mail:"
+      "email": "E-mail:",
+      "redesign": {
+        "mail": "Ask Us Everything",
+        "phone": "Call Us",
+        "adress": "Adress: "
+      }
     }
   }

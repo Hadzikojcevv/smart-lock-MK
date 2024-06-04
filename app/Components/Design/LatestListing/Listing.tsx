@@ -9,7 +9,7 @@ type ListingPropsType = {
 
 const Listing = ({items = [], cardColor = 'dark'}:ListingPropsType) => {
   return (
-    <div className='lg:w-10/12 w-full m-auto flex flex-wrap justify-center'>
+    <div className='lg:w-10/12 w-full m-auto flex flex-col md:flex-row justify-center'>
         {items.map(lock => <ProductCard key={lock.id} product={lock} color={cardColor}/>)}
     </div>
   )

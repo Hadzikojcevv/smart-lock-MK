@@ -1,21 +1,24 @@
+"use client";
 import { LockType } from "@/app/Types/types";
-import React from "react";
-import Btn from "../Reusables/Btn";
-import Image from "next/image";
 import {
   fontK2dBold,
-  fontKantumruy_Pro,
   fontKantumruy_ProBold,
   fontKantumruy_ProMedium,
 } from "../Fonts";
+import Btn from "../Reusables/Btn";
 
-import logo from "../../../../public/logo.png";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import FeatureIcon from "./FeatureIcon";
 
 type ProductInfoPropsType = {
   lock: LockType;
 };
 
 const ProductInfo = ({ lock }: ProductInfoPropsType) => {
+  const pathname = usePathname();
+  const isPathnameEng = pathname.includes("/en");
+
   return (
     <div className="w-11/12 lg:w-6/12 m-auto lg:ml-0">
       <h1 className={`${fontK2dBold.className} text-5xl lg:text-8xl`}>
@@ -32,26 +35,32 @@ const ProductInfo = ({ lock }: ProductInfoPropsType) => {
       >
         {" "}
         <span className="text-xl md:text-3xl">Price:</span> {lock.price}
+        <span className="text-md md:text-xl">MKD</span>
+        
       </h3>
+
       <p
-        className={`${fontKantumruy_ProMedium.className} text-md md:text-lg lg:text-xl`}
+        className={`${fontKantumruy_ProMedium.className} text-md md:text-lg lg:text-xl mt-4`}
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, eaque
-        incidunt? Fugiat delectus autem, magni aperiam sit corporis alias ea.
+        {isPathnameEng ? lock.descriptionEng : lock.description}
       </p>
       <div className="flex flex-col gap-2 my-4 md:my-8 lg:my-6">
         <p className={`text-xl md:text-3xl ${fontK2dBold.className}`}>
           Features:
         </p>
-        <div className="flex gap-4">
+        <div className="grid grid-cols-3 md:grid-cols-6 grid-rows-2 gap-4">
           {lock.desc.map((icon) => (
-            <div key={icon.icon}>
-              <Image src={icon.icon} alt={icon.title} width={50} height={50} />
-            </div>
+            <FeatureIcon
+              key={icon.title}
+              icon={icon.icon}
+              text={icon.titleEng}
+            />
           ))}
         </div>
       </div>
-      <Btn text={"Buy Now"} color={"dark"} />
+      <Link href={`/checkout/${lock.id}`}>
+        <Btn text={"Buy Now"} color={"dark"} />
+      </Link>
     </div>
   );
 };

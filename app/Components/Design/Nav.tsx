@@ -25,12 +25,10 @@ const Nav = ({ darkColor = false }: NavPropsType) => {
 
         <div className="flex justify-end gap-4">
           <div className="flex justify-end items-center gap-x-2">
-            <Link href={""}>
-              <Image src={insta} alt="Insta" width={20} height={20} />
-            </Link>
-            <Link href={""}>
+            {/* <a className="text-redesignWhite text-sm" href="tel:+38972277766">+38972277766</a> */}
+            <a href="https://www.facebook.com/profile.php?id=61556796012808" target="_blank">
               <Image src={fb} alt="Insta" width={20} height={20} />
-            </Link>
+            </a>
           </div>
 
           <LocaleSwitcher />
