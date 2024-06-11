@@ -284,8 +284,14 @@ export const locks: LockType[] = [
     price: 15900,
     tag: "Блиндор Врати",
     tagEng: "Blindor",
-    description: null,
-    descriptionEng: null,
+    description: "Моделот SLID 1 е врвна смарт брава која ги комбинира сите напредни функции за безбедност и удобност. Покрај опциите за отварање преку отпечаток од прст, лозинка, механички клуч, Tuya Smart апликација и NFC картичка, оваа брава доаѓа со вградена камера за Face ID идентификација. Камерата овозможува автоматско отварање при препознавање на лицето, како и следење во реално време преку вашиот мобилен телефон.Со SL_ID1, секогаш ќе знаете кој е пред вашата врата, а благодарение на потсетникот за замена на батерија, никогаш нема да се грижите за изненадни прекини. Совршена за канцеларии, домови или апартмани, оваа смарт брава нуди: ",
+    descriptionEng: "The SLID 1 model is a premium Smart Lock that combines all advanced functions for security and comfort. Additional options for opening via fingerprint, password, mechanical key, Tuya Smart app and NFC card. This Smart Lock equiped with built-in camera for Face ID and identification offers new level of security such as enabling automatic opening upon face recognition, as well as real-time tracking via your mobile phone. With the SL_ID1, you'll always know who's at your door, and thanks to the battery replacement reminder, you'll never have to worry about unexpected outages. Perfect for offices, homes or apartments, this smart lock offers:",
+    featuresListing: [
+      "Отварање преку Face ID, Следење во реално време - Преку мобилен телефон",
+      "Мултифункционално отварање - Отпечаток од прст, лозинка, механички клуч, Tuya Smart апликација, NFC картичка",
+      "Привремени пинови - Идеално за краткорочно издавање",
+      "Лог на пристапи - Контрола и безбедност"
+    ],
     desc: [
       {
         title: "3D Препознавање на Лице",
@@ -352,8 +358,14 @@ export const locks: LockType[] = [
     price: 23000,
     tag: "Блиндор Врати",
     tagEng: "Blindor",
-    description: null,
-    descriptionEng: null,
+    description: "Моделот SLID 1 е врвна смарт брава која ги комбинира сите напредни функции за безбедност и удобност. Покрај опциите за отварање преку отпечаток од прст, лозинка, механички клуч, Tuya Smart апликација и NFC картичка, оваа брава доаѓа со вградена камера за Face ID идентификација. Камерата овозможува автоматско отварање при препознавање на лицето, како и следење во реално време преку вашиот мобилен телефон.Со SL_ID1, секогаш ќе знаете кој е пред вашата врата, а благодарение на потсетникот за замена на батерија, никогаш нема да се грижите за изненадни прекини. Совршена за канцеларии, домови или апартмани, оваа смарт брава нуди: ",
+    descriptionEng: "The SLID 1 model is a premium Smart Lock that combines all advanced functions for security and comfort. Additional options for opening via fingerprint, password, mechanical key, Tuya Smart app and NFC card. This Smart Lock equiped with built-in camera for Face ID and identification offers new level of security such as enabling automatic opening upon face recognition, as well as real-time tracking via your mobile phone. With the SL_ID1, you'll always know who's at your door, and thanks to the battery replacement reminder, you'll never have to worry about unexpected outages. Perfect for offices, homes or apartments, this smart lock offers:",
+    featuresListing: [
+      "Отварање преку Face ID, Следење во реално време - Преку мобилен телефон",
+      "Мултифункционално отварање - Отпечаток од прст, лозинка, механички клуч, Tuya Smart апликација, NFC картичка",
+      "Привремени пинови - Идеално за краткорочно издавање",
+      "Лог на пристапи - Контрола и безбедност"
+    ],
     desc: [
       {
         title: "3D Препознавање на Лице",

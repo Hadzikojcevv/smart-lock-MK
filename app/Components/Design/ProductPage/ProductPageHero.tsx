@@ -9,11 +9,15 @@ type ProductPageHeroPropsType = {
 }
 
 const ProductPageHero = ({lock}: ProductPageHeroPropsType) => {
+
+  console.log(lock);
+  
+
   return (
     <Section bgColor='#E9E9EA'>
         <div className='flex flex-col lg:flex-row gap-y-8'>
             <ProductInfo lock={lock}/>
-            <ProductImage image={lock.image}/>
+            <ProductImage image={lock?.image ?? ""}/>
         </div>
     </Section>
   )

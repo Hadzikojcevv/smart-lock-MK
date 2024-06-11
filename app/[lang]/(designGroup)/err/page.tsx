@@ -28,7 +28,7 @@ const ErrPage = () => {
             </p>
 
             <Link
-              href={"/design"}
+              href={"/"}
               className={` bg-lightDark text-redesignWhite hover:bg-footerDark px-16 mt-4 py-4 rounded-full text-xl uppercase tracking-tighter shadow-xl transition-colors ease-in-out   ${fontKantumruy_ProMedium.className}`}
             >
               Home

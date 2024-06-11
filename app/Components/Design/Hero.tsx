@@ -27,7 +27,7 @@ const Hero = ({ lang }: any) => {
             </p>
 
             <Link
-              href={"/design/products"}
+              href={"/products"}
               className={`w-full py-3 px-6 capitalize lg:text-2xl text-center bg-redesignWhite rounded-full text-dark hover:text-redesignWhite hover:bg-lightestdark ease-in-out transition-colors ${fontK2dRegular.className}`}
             >
               {lang.home.redesign.hero.btn}

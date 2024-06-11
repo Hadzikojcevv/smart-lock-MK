@@ -51,7 +51,7 @@ const ProductCard = ({ product, color = "light" }: ProductCardPropsType) => {
               MKD
             </span>
           </p>
-          <Link href={`/design/${product.id}`}>
+          <Link href={`/${product.id}`}>
             <Btn
               text={"Details"}
               color={color === "light" ? "dark" : "light"}

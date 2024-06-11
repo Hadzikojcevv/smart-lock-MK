@@ -40,7 +40,7 @@ const OrdersPage = () => {
   }, [filterQuery, status]);
 
   return (
-    <section className="pt-28 flex flex-col">
+    <section className="flex flex-col">
       <div className=" bg-lightestdark">
         <ul className="flex justify-between m-auto w-11/12 lg:w-6/12">
           <li className="w-1/3 flex justify-center items-center border-dark border-l-2">

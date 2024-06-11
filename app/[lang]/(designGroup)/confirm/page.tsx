@@ -30,7 +30,7 @@ const ConfirmPage = () => {
             <p className="text-xl md:text-2xl">Our team will contact you shortly for order confirmation</p>
 
             <Link
-              href={"/design"}
+              href={"/"}
               className={` bg-lightDark text-redesignWhite hover:bg-footerDark px-16 mt-4 py-4 rounded-full text-xl uppercase tracking-tighter shadow-xl transition-colors ease-in-out   ${fontKantumruy_ProMedium.className}`}
             >
               Home

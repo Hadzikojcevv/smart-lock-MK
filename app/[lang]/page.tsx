@@ -1,21 +1,29 @@
-import { Locale } from "@/i18n.config";
-import { getDictionary } from "@/lib/dictionary";
-import Listing from "../Components/Listing/Listing";
-import Form from "../Components/Form/Form";
-import Footer from "../Components/Footer/Footer";
+import FeaturesSection from '@/app/Components/Design/Features/FeaturesSection';
+import Footer from '@/app/Components/Design/Footer/Footer';
+import Hero from '@/app/Components/Design/Hero';
+import LatestArivals from '@/app/Components/Design/LatestArivals';
+import Products from '@/app/Components/Design/Products';
+import { Locale } from '@/i18n.config';
+import { getDictionary } from '@/lib/dictionary';
 
-export default async function Home({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
+const DesignPage = async ({
+    params: { lang },
+  }: {
+    params: { lang: Locale };
+  }) => {
+
   const { page } = await getDictionary(lang);
 
   return (
     <>
-
-      <Listing lang={page} page="home"/>
-      <Form lang={page} />
+        <Hero lang={page}/>
+        <Products lang={page}/>
+        <LatestArivals lang={page}/>
+        <FeaturesSection />
+        {/* <Newsletter /> */}
+        <Footer lang={page}/>
     </>
-  );
+  )
 }
+
+export default DesignPage

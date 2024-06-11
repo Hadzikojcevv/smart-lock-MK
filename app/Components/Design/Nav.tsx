@@ -19,7 +19,7 @@ const Nav = ({ darkColor = false }: NavPropsType) => {
           darkColor ? "bg-footerDark" : ""
         }`}
       >
-        <Link href={"/design"}>
+        <Link href={"/"}>
           <Image src={logo} alt="Logo" width={120} height={70} />
         </Link>
 

@@ -58,8 +58,8 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
   const router = useRouter();
   const pathname = usePathname();
   const isPathEn = pathname.includes("/en");
-  // const [state, handleSubmit] = useForm("xjvnrjzk");
-  const [state, handleSubmit] = useForm("mrgwnngw");
+  const [state, handleSubmit] = useForm("xjvnrjzk");
+  // const [state, handleSubmit] = useForm("mrgwnngw");
 
   const nameRef = useRef<HTMLInputElement>(null);
   const lastNameRef = useRef<HTMLInputElement>(null);
@@ -165,7 +165,6 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
             required
             id="quantity"
             min={1}
-            defaultValue={quantity}
             value={quantity}
             className={`p-2 md:p-4  rounded-full border-2 border-darkText outline-darkText w-4/12`}
             onChange={(e) => {
