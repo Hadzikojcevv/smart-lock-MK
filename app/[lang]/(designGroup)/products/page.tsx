@@ -1,9 +1,7 @@
 import Form from "@/app/Components/Form/Form";
 import Listing from "@/app/Components/Listing/Listing";
-import React from "react";
-import page from "../page";
-import { getDictionary } from "@/lib/dictionary";
 import { Locale } from "@/i18n.config";
+import { getDictionary } from "@/lib/dictionary";
 
 const ProductsPage = async ({
     params: { lang },

@@ -14,7 +14,10 @@ export type LockType = {
   tagEng: string;
   desc: SingleDescItem[];
   description: string | null;
-  descriptionEng: string | null 
+  descriptionEng: string | null;
+  featuresListing?: string[];
+  featuresListingEng?: string[];
+
 };
 
 export type OrderType = {

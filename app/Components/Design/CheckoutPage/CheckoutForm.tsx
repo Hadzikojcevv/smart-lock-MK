@@ -25,7 +25,7 @@ class Order {
   email: string;
   total: number;
   isFinished: false;
-  date: Date
+  date: Date;
   constructor(
     name: string,
     lastName: string,
@@ -35,7 +35,7 @@ class Order {
     city: string,
     product: string,
     quantity: number,
-    total: number,
+    total: number
   ) {
     this.name = name;
     this.lastName = lastName;
@@ -47,7 +47,7 @@ class Order {
     this.quantity = quantity;
     this.total = total;
     this.isFinished = false;
-    this.date = new Date()
+    this.date = new Date();
   }
 }
 
@@ -60,8 +60,6 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
   const isPathEn = pathname.includes("/en");
   // const [state, handleSubmit] = useForm("xjvnrjzk");
   const [state, handleSubmit] = useForm("mrgwnngw");
-
-
 
   const nameRef = useRef<HTMLInputElement>(null);
   const lastNameRef = useRef<HTMLInputElement>(null);
@@ -99,11 +97,10 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
         console.log(response.json());
       })
       .then((data) => {
-        console.log("Success", data);
         router.push("/confirm");
       })
       .catch((error) => {
-        console.error("Error:", error);
+        router.push("/err");
       });
   };
 
@@ -112,7 +109,7 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
       className={`${fontK2dRegular.className} mb-8 lg:mb-0`}
       onSubmit={(e) => {
         onSubmit(e);
-        handleSubmit(e)
+        handleSubmit(e);
 
         e.currentTarget.reset();
         setPhoneNum("");
@@ -176,8 +173,12 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
               setQuantity(e.currentTarget.valueAsNumber);
             }}
           />
-          <input type="text" className="hidden" name="Product" value={lock.title}/>
-
+          <input
+            type="text"
+            className="hidden"
+            name="Product"
+            value={lock.title}
+          />
         </div>
       </div>
       <div className="flex flex-col gap-4">
