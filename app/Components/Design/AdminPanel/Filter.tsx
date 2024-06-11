@@ -1,6 +1,4 @@
 import React from 'react'
-import FilterBtn from './FilterBtn'
-
 
 
 const Filter = () => {
