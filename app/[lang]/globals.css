@@ -199,6 +199,10 @@ footer {
   .inputPhoneContainer{
     padding: 0.5rem;
   }
+
+  .heroSection {
+    height: auto;
+  }
 }
 
 

@@ -11,7 +11,7 @@ const SectionTitle = ({ title, preTitle, color = 'dark' }: SectionTitlePropsType
     <>
       {preTitle && <p className={`text-center capitalize font-semibold text-sm ${fontKantumruy_ProBold.className} ${color === 'light' ? "text-redesignWhite" : ""}`}>{preTitle}</p>}
       <h2
-        className={`text-center text-darkText text-6xl capitalize ${color === 'light' ? "text-redesignWhite" : ""} ${fontK2dMedium.className}`}
+        className={`text-center text-darkText text-5xl capitalize ${color === 'light' ? "text-redesignWhite" : ""} ${fontK2dMedium.className}`}
       >
         {title}
       </h2>

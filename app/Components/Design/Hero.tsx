@@ -28,7 +28,7 @@ const Hero = ({ lang }: any) => {
 
             <Link
               href={"/products"}
-              className={`w-full py-3 px-6 capitalize lg:text-2xl text-center bg-redesignWhite rounded-full text-dark hover:text-redesignWhite hover:bg-lightestdark ease-in-out transition-colors ${fontK2dRegular.className}`}
+              className={`w-full block py-3 px-6 capitalize text-xl mb-20 lg:text-2xl text-center bg-redesignWhite rounded-full text-dark hover:text-redesignWhite hover:bg-lightestdark ease-in-out transition-colors ${fontK2dRegular.className}`}
             >
               {lang.home.redesign.hero.btn}
             </Link>

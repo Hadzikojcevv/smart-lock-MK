@@ -7,7 +7,7 @@ import { locks } from "../../Listing/Listing";
 
 const FeaturesSection = ({lang}: any) => {
   return (
-    <section className="featuresSection py-4 md:py-8 lg:py-16">
+    <section className="featuresSection py-8 md:py-8 lg:py-16">
       <SectionTitle
         title={lang.home.redesign.features.title}
         preTitle={lang.home.redesign.features.subTitle}
