@@ -28,10 +28,18 @@ const features: FeatureCardType[] = [
     image2: "https://i.imgur.com/joRBg4u.png",
     image3: "https://i.imgur.com/cn1mKQx.png",
     image4: "https://i.imgur.com/gcmGumt.png",
-    desc1: "Fingerprint",
+    desc1: "Отисок",
+    desc1Eng: "Fingerprint",
+
     desc2: "Smart Lock",
-    desc3: "Passcode",
-    desc4: "NFC Card",
+    desc2Eng: "Smart Lock",
+
+    desc3: "Лозинка",
+    desc3Eng: "Passcode",
+
+    desc4: "NFC Картичка",
+    desc4Eng: "NFC Card",
+
   },
   {
     image1: "https://i.imgur.com/ZKd6FbQ.png",
@@ -39,27 +47,49 @@ const features: FeatureCardType[] = [
     image3: "https://i.imgur.com/32wj1Jl.png",
     image4: "https://i.imgur.com/Qc2DDfx.png",
     desc1: "Tuya Smart App",
-    desc2: "Mechanical Key",
-    desc3: "Battery Reminder",
-    desc4: "Silent Mode",
+    desc1Eng: "Tuya Smart App",
+
+    desc2: "Механички Клуч",
+    desc2Eng: "Mechanical Key",
+
+    desc3: "Потсетник за Батерија",
+    desc3Eng: "Battery Reminder",
+
+    desc4: "Нечујно",
+    desc4Eng: "Silent Mode",
+
   },
   {
     image1: "https://i.imgur.com/uZriFSh.png",
     image2: "https://i.imgur.com/joRBg4u.png",
     image3: "https://i.imgur.com/MShSiSL.png",
     image4: "https://i.imgur.com/QQ3YIfk.png",
-    desc1: "WaterProof",
-    desc2: "Auto Lock",
-    desc3: "3D Face Recognition",
-    desc4: "Photo",
+    desc1: "Водоотпорно",
+    desc1Eng: "WaterProof",
+
+    desc2: "Auto Заклучување",
+    desc2Eng: "Auto Lock",
+
+    desc3: "Face ID",
+    desc3Eng: "Face ID",
+
+    desc4: "Сликање",
+    desc4Eng: "Photo",
+
   },
   {
     image1: "https://i.imgur.com/M6fs8fD.png",
     image2: "https://i.imgur.com/XcMScoa.png",
     image3: "https://i.imgur.com/l7HccEx.png",
-    desc1: "Virtual Spy",
-    desc2: "Emergency USB Power",
-    desc3: "Remote Unlock From Phone",
+    desc1: "Виртуелна Шпионка",
+    desc1Eng: "Virtual Spy",
+    
+    desc2: "USB Приклучок",
+    desc2Eng: "Emergency USB Power",
+
+    desc3: "Далечинско Отклучување пореку телефон",
+    desc3Eng: "Remote Unlock From Phone",
+
   },
 ];
 

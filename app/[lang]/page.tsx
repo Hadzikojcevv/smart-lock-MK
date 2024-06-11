@@ -19,7 +19,7 @@ const DesignPage = async ({
         <Hero lang={page}/>
         <Products lang={page}/>
         <LatestArivals lang={page}/>
-        <FeaturesSection />
+        <FeaturesSection lang={page}/>
         {/* <Newsletter /> */}
         <Footer lang={page}/>
     </>

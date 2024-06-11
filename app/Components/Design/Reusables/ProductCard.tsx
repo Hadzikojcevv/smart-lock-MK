@@ -38,8 +38,8 @@ const ProductCard = ({ product, color = "light" }: ProductCardPropsType) => {
           <h3 className={`text-4xl ${fontK2dBold.className}`}>
             {product.title}
           </h3>
-          <p className={`text-lg mb-4  ${fontK2dMedium.className}`}>
-            Price:{" "}
+          <p className={`text-mds mb-4  ${fontK2dMedium.className}`}>
+            {isPathnameEng ? "Price:" : "Цена:"}
             <span
               className={`text-3xl ${
                 color === "light" ? "text-lightDark" : "text-lightestDark"
@@ -53,7 +53,7 @@ const ProductCard = ({ product, color = "light" }: ProductCardPropsType) => {
           </p>
           <Link href={`/${product.id}`}>
             <Btn
-              text={"Details"}
+              text={isPathnameEng ? "Details" : "Види Повеќе"}
               color={color === "light" ? "dark" : "light"}
             />
           </Link>

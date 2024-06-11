@@ -8,7 +8,7 @@ const Hero = ({ lang }: any) => {
     <section className=" heroSection">
       <div className="heroOverlay">
         <Nav />
-        <div className="flex w:11/12 lg:w-9/12 m-auto justify-center lg:justify-start w-full lg:h-2/3 xl2:pt-20 md:pt-2 pt-6">
+        <div className="flex w:11/12 lg:w-9/12 m-auto justify-center lg:justify-start w-full lg:h-2/3 xl2:pt-20 md:pt-6 pt-16">
           <div className="text-white w-10/12 lg:w-7/12 m-auto lg:ml-0 text-center lg:text-left relative text-redesignWhite">
             <h1
               className={`text-4xl lg:text-8xl font-bold uppercase ${fontK2dBold.className}`}
@@ -16,7 +16,7 @@ const Hero = ({ lang }: any) => {
               {lang.home.redesign.hero.title}
             </h1>
             <h2
-              className={`text-lg lg:text-7xl pb-4 lg:pb-8 ${fontK2dBold.className}`}
+              className={`text-md lg:text-7xl pb-4 lg:pb-8 ${fontK2dBold.className}`}
             >
               {lang.home.redesign.hero.subTitle}
             </h2>

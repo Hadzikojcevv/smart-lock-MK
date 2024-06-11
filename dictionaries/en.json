@@ -24,7 +24,9 @@
           },
           "features": {
             "title": "Features",
-            "subTitle": "Technology Security System"
+            "subTitle": "Technology Security System",
+            "promoBtn": "Buy Now"
+
           }
         },
         "form": {
@@ -39,7 +41,7 @@
       "tel": "Tel:",
       "email": "E-mail:",
       "redesign": {
-        "mail": "Ask Us Everything",
+        "mail": "Ask Us Anything",
         "phone": "Call Us",
         "adress": "Adress: "
       }
