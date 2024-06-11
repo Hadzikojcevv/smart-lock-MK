@@ -12,7 +12,7 @@ const CheckoutPage = ({ params }: { params: { id: string } }) => {
     <>
       <Nav darkColor/>
         <CheckoutHero lock={lockToRender}/>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

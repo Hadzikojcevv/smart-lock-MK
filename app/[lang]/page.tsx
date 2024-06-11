@@ -21,7 +21,7 @@ const DesignPage = async ({
         <LatestArivals lang={page}/>
         <FeaturesSection lang={page}/>
         {/* <Newsletter /> */}
-        <Footer lang={page}/>
+        {/* <Footer lang={page}/> */}
     </>
   )
 }

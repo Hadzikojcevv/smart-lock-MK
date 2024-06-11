@@ -11,7 +11,7 @@ const LockPage = ({params}: {params: {id: string}}) => {
     <>
         <Nav darkColor/>
         <ProductPageHero lock={lockToRender}/>
-        <Footer />
+        {/* <Footer /> */}
     </>
   )
 }

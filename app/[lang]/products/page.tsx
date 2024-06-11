@@ -7,7 +7,7 @@ const ProductsPage = () => {
     <>
         <Nav darkColor/>
         <ProductsListing />
-        <Footer />
+        {/* <Footer /> */}
     </>
   )
 }
