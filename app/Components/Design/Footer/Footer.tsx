@@ -43,7 +43,7 @@ const Footer = ({lang}: any) => {
           <div className="flex flex-col lg:flex-row justify-center gap-x-20 items-center">
             <Image src={logo} alt="Logo" width={200} height={100} />
             <p className="text-sm md:text-md text-center">
-              <span className="text-sm md:text-md">{isPathnameEng ? "Adress" : "Адреса"}:</span> Marshal Tito 123, Gevgelija, Macedonia
+              <span className="text-sm md:text-md">{isPathnameEng ? "Adress: Marshal Tito 198, Gevgelija, Macedonia" : "Адреса: Маршал Тито бр.198 Гевгелија, Македонија"}</span> 
             </p>
           </div>
         </>

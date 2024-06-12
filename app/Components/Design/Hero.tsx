@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { fontK2dBold, fontKantumruy_Pro, fontK2dRegular } from "./Fonts";
+import { fontK2dBold, fontK2dRegular, fontKantumruy_Pro } from "./Fonts";
 import Nav from "./Nav";
 
 const Hero = ({ lang }: any) => {
 
+  const isLangMk = lang.home.redesign.productsTitle.includes('Продукти')
+ 
   return (
     <section className=" heroSection">
       <div className="heroOverlay">
@@ -27,7 +29,7 @@ const Hero = ({ lang }: any) => {
             </p>
 
             <Link
-              href={"/products"}
+              href={`/${isLangMk ? "mk" : "en"}/products`}
               className={`w-full block py-3 px-6 capitalize text-xl mb-20 lg:text-2xl text-center bg-redesignWhite rounded-full text-dark hover:text-redesignWhite hover:bg-lightestdark ease-in-out transition-colors ${fontK2dRegular.className}`}
             >
               {lang.home.redesign.hero.btn}

@@ -121,7 +121,7 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
           name="Name"
           ref={nameRef}
           required
-          placeholder="Name*"
+          placeholder={isPathEn ? "Name*" : "Име*"}
           className={`p-2 md:p-4 rounded-full border-2 border-darkText outline-darkText`}
         />
         <input
@@ -129,7 +129,7 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
           name="Last Name"
           ref={lastNameRef}
           required
-          placeholder="Last Name*"
+          placeholder={isPathEn ? "Last Name*" : "Презиме*"}
           className={`p-2 md:p-4  rounded-full border-2 border-darkText outline-darkText`}
         />
       </div>
@@ -158,7 +158,9 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
           }}
         />
         <div className="flex justify-end gap-2 items-center my-4">
-          <label htmlFor="quantity">Quantity:</label>
+          <label htmlFor="quantity">
+            {isPathEn ? "Quantity:" : "Количина*"}
+          </label>
           <input
             type="number"
             name="Quantity"
@@ -169,7 +171,15 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
             className={`p-2 md:p-4  rounded-full border-2 border-darkText outline-darkText w-4/12`}
             onChange={(e) => {
               setTotalPrice(lock.price * e.currentTarget.valueAsNumber);
-              setQuantity(e.currentTarget.valueAsNumber);
+
+              if (
+                isNaN(e.currentTarget.valueAsNumber) ||
+                e.currentTarget.valueAsNumber === 0
+              ) {
+                setQuantity(1);
+              } else {
+                setQuantity(e.currentTarget.valueAsNumber);
+              }
             }}
           />
           <input
@@ -186,7 +196,7 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
           name="Email"
           required
           ref={emailRef}
-          placeholder="Email*"
+          placeholder={isPathEn ? "Email*" : "Емаил*"}
           className={`p-2 md:p-4  rounded-full border-2 border-darkText outline-darkText`}
         />
         <div className="flex flex-col md:flex-row gap-4 justify-between">
@@ -195,7 +205,7 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
             name="Adress"
             required
             ref={adressRef}
-            placeholder="Adress*"
+            placeholder={isPathEn ? "Adress*" : "Адреса*"}
             className={`p-2 md:p-4  rounded-full border-2 border-darkText outline-darkText`}
           />
           <input
@@ -203,7 +213,7 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
             name="City"
             required
             ref={cityRef}
-            placeholder="City*"
+            placeholder={isPathEn ? "City*" : "Град*"}
             className={`p-2 md:p-4  rounded-full border-2 border-darkText outline-darkText`}
           />
         </div>
@@ -213,15 +223,16 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
         <button
           className={` bg-lightDark text-redesignWhite hover:bg-footerDark w-full py-4 rounded-full text-3xl uppercase tracking-tighter shadow-xl transition-colors ease-in-out   ${fontKantumruy_ProMedium.className}`}
         >
-          Buy
+          {isPathEn ? "Buy" : "Купи"}
         </button>
 
         <div className="text-lg">
           <p>
-            Product: <span className="text-4xl">{lock.title}</span>
+            {isPathEn ? "Product" : "Продукт"}:{" "}
+            <span className="text-4xl">{lock.title}</span>
           </p>
           <p>
-            Total:{" "}
+            {isPathEn ? "Total" : "Вкупно"}:{" "}
             <span className="text-4xl">
               {(lock.price * quantity).toLocaleString("en-EN")}{" "}
             </span>{" "}
@@ -230,6 +241,12 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
         </div>
       </div>
       <div>
+        <p>
+          *
+          {isPathEn
+            ? "All fields are mandatory."
+            : "Сите полиња се задолжителни за пополнување."}
+        </p>
         <p>
           *
           {isPathEn

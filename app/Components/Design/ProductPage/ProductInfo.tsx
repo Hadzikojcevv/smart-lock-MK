@@ -51,12 +51,12 @@ const ProductInfo = ({ lock }: ProductInfoPropsType) => {
         className={`${fontK2dBold.className} text-3xl lg:text-5xl mt-8 md:mt-10 lg:mt-12`}
       >
         {" "}
-        <span className="text-xl md:text-3xl">Price:</span> {lock.price}
+        <span className="text-xl md:text-3xl">{isPathnameEng ? "Price:" : "Цена:"}</span> {lock.price.toLocaleString('en-EN')}
         <span className="text-md md:text-xl">MKD</span>
       </h3>
 
       <p
-        className={`${fontKantumruy_ProMedium.className} text-md md:text-lg lg:text-xl mt-4`}
+        className={`text-sm md:text-md lg:text-lg mt-4`}
       >
         {isPathnameEng ? lock.descriptionEng : lock.description}
       </p>
@@ -75,20 +75,20 @@ const ProductInfo = ({ lock }: ProductInfoPropsType) => {
       )}
       <div className="flex flex-col gap-2 my-4 md:my-8 lg:my-6">
         <p className={`text-xl md:text-3xl ${fontK2dBold.className}`}>
-          Features:
+          {isPathnameEng ? "Features:" : "Карактеристики:"}
         </p>
         <div className="grid grid-cols-3 md:grid-cols-6 grid-rows-2 gap-4">
           {lock.desc.map((icon) => (
             <FeatureIcon
               key={icon.title}
               icon={icon.icon}
-              text={icon.titleEng}
+              text={isPathnameEng ? icon.titleEng : icon.title}
             />
           ))}
         </div>
       </div>
-      <Link href={`/checkout/${lock.id}`}>
-        <Btn text={"Buy Now"} color={"dark"} />
+      <Link href={`/${isPathnameEng ? 'en' : 'mk'}/checkout/${lock.id}`}>
+        <Btn text={isPathnameEng ? "Buy Now" : "Купи Веднаш"} color={"dark"} />
       </Link>
     </div>
   );

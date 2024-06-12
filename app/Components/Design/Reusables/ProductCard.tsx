@@ -51,7 +51,7 @@ const ProductCard = ({ product, color = "light" }: ProductCardPropsType) => {
               MKD
             </span>
           </p>
-          <Link href={`/${product.id}`}>
+          <Link href={`/${isPathnameEng ? 'en' : 'mk'}/${product.id}`}>
             <Btn
               text={isPathnameEng ? "Details" : "Види Повеќе"}
               color={color === "light" ? "dark" : "light"}

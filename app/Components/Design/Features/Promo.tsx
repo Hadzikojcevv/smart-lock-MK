@@ -12,6 +12,8 @@ type PromoPropsType = {
 };
 
 const Promo = ({ item, lang }: PromoPropsType) => {
+
+  const isLangMk = lang.home.redesign.productsTitle.includes('Продукти')
   
   return (
     <div className="m-auto w-11/12 md:w-5/12 rounded-lg bg-redesignWhite px-8 pt-24 pb-8 flex flex-col items-center relative">
@@ -20,7 +22,7 @@ const Promo = ({ item, lang }: PromoPropsType) => {
         {item.title}
       </h3>
       <Image src={item.cardImage} alt={item.title} width={200} height={200} />
-      <Link href={`/design/${item.id}`} className="w-full ">
+      <Link href={`/${isLangMk ? 'mk' : 'en'}/${item.id}`} className="w-full ">
         <Btn text={lang.home.redesign.features.promoBtn} color={"dark"} />
       </Link>
     </div>
