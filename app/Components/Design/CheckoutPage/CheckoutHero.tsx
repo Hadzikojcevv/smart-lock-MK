@@ -8,10 +8,11 @@ import CheckoutForm from './CheckoutForm'
 import { usePathname } from 'next/navigation'
 
 type CheckoutHeroPropsType = {
-    lock:LockType
+    lock:LockType,
+    lang: any
 }
 
-const CheckoutHero = ({lock}: CheckoutHeroPropsType) => {
+const CheckoutHero = ({lock, lang}: CheckoutHeroPropsType) => {
 
     const pathname = usePathname()
     const isPathEng = pathname.includes('/en')
@@ -23,7 +24,7 @@ const CheckoutHero = ({lock}: CheckoutHeroPropsType) => {
                 <SectionTitle title={isPathEng ? 'Checkout' : 'Плаќање'} color={'dark'} />
 
                 <div className='flex flex-col lg:flex-row justify-between md:mt-8  mt-4'>
-                    <CheckoutForm lock={lock}/>
+                    <CheckoutForm lock={lock} lang={lang}/>
                     <ProductImage image={lock.image} />
                 </div>
             </>

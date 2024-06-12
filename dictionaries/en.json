@@ -37,6 +37,31 @@
       "products":{
         "title": "Our Products",
         "subTitile": "Smart Locks"
+      },
+      "checkout": {
+        "name": "Name",
+        "lastName": "Last Name",
+        "quantity": "Quantity",
+        "email": "Email",
+        "adress": "Adress",
+        "city": "City",
+        "btn":"Buy Now",
+        "product": "Product",
+        "total": "Total",
+        "msg1": "*All fiels are mandatory.",
+        "msg2": "*Paying is made upon delivery."
+      },
+      "confirm": {
+        "success": "Success",
+        "thanks": "Thank You For Your Order",
+        "msg": "Our team will contact you shortly for order confirmation",
+        "btn": "Home"
+      },
+      "err":{
+        "title": "Oops...!",
+        "error": "Oops, an error ocured!",
+        "msg": "Please try again later.",
+        "btn": "Home"
       }
     },
     "footer": {

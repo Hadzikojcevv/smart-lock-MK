@@ -1,17 +1,17 @@
 "use client";
 import { LockType } from "@/app/Types/types";
-import React, { useRef, useState } from "react";
-import {
-  fontK2dMedium,
-  fontK2dRegular,
-  fontKantumruy_ProMedium,
-} from "../Fonts";
-import PhoneInput from "react-phone-input-2";
-import { usePathname, useRouter } from "next/navigation";
 import { useForm } from "@formspree/react";
+import { useRouter } from "next/navigation";
+import React, { useRef, useState } from "react";
+import PhoneInput from "react-phone-input-2";
+import {
+  fontK2dRegular,
+  fontKantumruy_ProMedium
+} from "../Fonts";
 
 type CheckoutFormPropsType = {
   lock: LockType;
+  lang: any
 };
 
 class Order {
@@ -51,13 +51,11 @@ class Order {
   }
 }
 
-const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
+const CheckoutForm = ({ lock, lang }: CheckoutFormPropsType) => {
   const [quantity, setQuantity] = useState(1);
   const [phoneNum, setPhoneNum] = useState("");
   const [totalPrice, setTotalPrice] = useState(0);
   const router = useRouter();
-  const pathname = usePathname();
-  const isPathEn = pathname.includes("/en");
   const [state, handleSubmit] = useForm("xjvnrjzk");
   // const [state, handleSubmit] = useForm("mrgwnngw");
 
@@ -121,7 +119,7 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
           name="Name"
           ref={nameRef}
           required
-          placeholder={isPathEn ? "Name*" : "Име*"}
+          placeholder={lang?.checkout?.name ?? "Name"}
           className={`p-2 md:p-4 rounded-full border-2 border-darkText outline-darkText`}
         />
         <input
@@ -129,7 +127,7 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
           name="Last Name"
           ref={lastNameRef}
           required
-          placeholder={isPathEn ? "Last Name*" : "Презиме*"}
+          placeholder={lang?.checkout?.lastName ?? "Last Name"}
           className={`p-2 md:p-4  rounded-full border-2 border-darkText outline-darkText`}
         />
       </div>
@@ -159,7 +157,7 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
         />
         <div className="flex justify-end gap-2 items-center my-4">
           <label htmlFor="quantity">
-            {isPathEn ? "Quantity:" : "Количина*"}
+              {lang?.checkout?.quantity ?? "Quantity"}:
           </label>
           <input
             type="number"
@@ -196,7 +194,7 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
           name="Email"
           required
           ref={emailRef}
-          placeholder={isPathEn ? "Email*" : "Емаил*"}
+          placeholder={lang?.checkout?.email ?? "Email"}
           className={`p-2 md:p-4  rounded-full border-2 border-darkText outline-darkText`}
         />
         <div className="flex flex-col md:flex-row gap-4 justify-between">
@@ -205,7 +203,7 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
             name="Adress"
             required
             ref={adressRef}
-            placeholder={isPathEn ? "Adress*" : "Адреса*"}
+            placeholder={lang?.checkout?.adress ?? "Adress"}
             className={`p-2 md:p-4  rounded-full border-2 border-darkText outline-darkText`}
           />
           <input
@@ -213,7 +211,7 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
             name="City"
             required
             ref={cityRef}
-            placeholder={isPathEn ? "City*" : "Град*"}
+            placeholder={lang?.checkout?.city ?? "City"}
             className={`p-2 md:p-4  rounded-full border-2 border-darkText outline-darkText`}
           />
         </div>
@@ -223,16 +221,16 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
         <button
           className={` bg-lightDark text-redesignWhite hover:bg-footerDark w-full py-4 rounded-full text-3xl uppercase tracking-tighter shadow-xl transition-colors ease-in-out   ${fontKantumruy_ProMedium.className}`}
         >
-          {isPathEn ? "Buy" : "Купи"}
+          {lang?.checkout?.btn ?? "Buy Now"}
         </button>
 
         <div className="text-lg">
           <p>
-            {isPathEn ? "Product" : "Продукт"}:{" "}
+          {lang?.checkout?.product ?? "Product"}:
             <span className="text-4xl">{lock.title}</span>
           </p>
           <p>
-            {isPathEn ? "Total" : "Вкупно"}:{" "}
+          {lang?.checkout?.total ?? "Total"}:
             <span className="text-4xl">
               {(lock.price * quantity).toLocaleString("en-EN")}{" "}
             </span>{" "}
@@ -242,16 +240,11 @@ const CheckoutForm = ({ lock }: CheckoutFormPropsType) => {
       </div>
       <div>
         <p>
-          *
-          {isPathEn
-            ? "All fields are mandatory."
-            : "Сите полиња се задолжителни за пополнување."}
+          
+          {lang?.checkout?.msg1 ?? "*All Fields Are Mandatory."}
         </p>
         <p>
-          *
-          {isPathEn
-            ? "Payment is made upon delivery."
-            : "Плаќањето се врши при испораката."}
+        {lang?.checkout?.msg2 ?? "*Payout is made upon delivery."}
         </p>
       </div>
     </form>
