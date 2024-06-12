@@ -7,9 +7,8 @@ const CheckoutPage = ({ params }: { params: { id: string } }) => {
 
   return (
     <>
-      <Nav darkColor/>
-        <CheckoutHero lock={lockToRender}/>
-      {/* <Footer /> */}
+      <Nav darkColor />
+      <CheckoutHero lock={lockToRender} />
     </>
   );
 };

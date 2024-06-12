@@ -33,9 +33,8 @@
           "desc": "Веднаш ќе добиете одговор!"
         }
       },
-      "about": {
-        "title": "About Us",
-        "description": "This is the about page"
+      "products":{
+        "title": "Нашите Продукти"
       }
     },
     "footer": {

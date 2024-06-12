@@ -33,6 +33,10 @@
           "title": "Contact Us!",
           "desc": "Let's get in touch!"
         }
+      },
+      "products":{
+        "title": "Our Products",
+        "subTitile": "Smart Locks"
       }
     },
     "footer": {
