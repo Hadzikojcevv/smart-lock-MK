@@ -9,7 +9,7 @@ type ListingPropsType = {
 
 const Listing = ({ orders, statusHandler }: ListingPropsType) => {
   return (
-    <ul className="m-auto w-11/12 pt-4 lg:pt-8">
+    <ul className="m-auto w-11/12 pt-4 lg:pt-8 min-h-screen">
         {/* <li className="md:flex justify-between items-center hidden ">
             <span className="border-2 border-dark w-1/6 text-center p-2">Buyer Info</span>
             <span className="border-2 border-dark w-1/6 text-center p-2">Phone</span>
