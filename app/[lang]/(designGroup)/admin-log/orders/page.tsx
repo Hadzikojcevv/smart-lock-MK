@@ -1,42 +1,53 @@
-"use client";
+"use client"
+
 import Listing from "@/app/Components/Design/AdminPanel/Listing";
 import { OrderType } from "@/app/Types/types";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const filters = [
-  {
-    text: "All",
-    filter: "",
-  },
-  {
-    text: "Finished",
-    filter: true,
-  },
-  {
-    text: "Pending",
-    filter: false,
-  },
-];
+// const filters = [
+//   {
+//     text: "All",
+//     filter: "",
+//   },
+//   {
+//     text: "Finished",
+//     filter: true,
+//   },
+//   {
+//     text: "Pending",
+//     filter: false,
+//   },
+// ];
 
-const users = [
-  {
-    user: "Vlatko",
-    pass: "locks@gvg",
-  },
-];
+// const users = [
+//   {
+//     user: "Vlatko",
+//     pass: "locks@gvg",
+//   },
+// ];
 
 const OrdersPage = () => {
   const [orders, setOrders] = useState<OrderType[]>([]);
   const [filterQuery, setFilterQuery] = useState<"" | true | false>("");
   const [status, setStatus] = useState(true);
-  const user = sessionStorage.getItem("access");
+  const [user, setUser] = useState('')
 
   const changeStatus = () => {
     setStatus(!status);
   };
 
   useEffect(() => {
+
+    const user = sessionStorage.getItem("access");
+    if (!user) {
+      // Redirect to login page if access token is not present
+      return redirect("https://www.smartlocks.mk/en/admin-log");
+    }else {
+
+      setUser("Vlatko")
+    }
+
     fetch(
       `https://smartlocksmkdata.glitch.me/orders${
         filterQuery !== "" ? `?isFinished=${filterQuery}` : ""
@@ -48,7 +59,7 @@ const OrdersPage = () => {
       });
   }, [filterQuery, status]);
 
-  if (user) {
+  if (user == 'Vlatko') {
     return (
       <section className="flex flex-col">
         <div className=" bg-lightestdark">
