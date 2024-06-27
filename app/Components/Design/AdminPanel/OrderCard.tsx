@@ -103,18 +103,18 @@ const OrderCard = ({ order, statusHandler }: OrderCardPropsType) => {
       </div>
 
       {isDescriptionVisible && (
-        <div className="flex flex-start gap-x-4 border-t-2 border-dark w-11/12 pt-2">
-          <span className=" px-2 font-semibold">Email: {order.email}</span>
-          <span className="border-l-2 border-dark px-2 font-semibold">
+        <div className="flex flex-col md:flex-row gap-x-4 border-t-2 border-dark w-11/12 pt-2">
+          <p className="px-2 font-semibold">Email: {order.email}</p>
+          <p className="md:border-l-2 mb-4 md:mb-0 border-dark px-2 font-semibold">
             Adress: {order.adress}
-          </span>
-          <span className="border-l-2 border-dark px-2 font-semibold">
+          </p>
+          <p className="md:border-l-2 mb-4 md:mb-0 border-dark px-2 font-semibold">
             City: {order.city}
-          </span>
+          </p>
           {order.date && (
-            <span className="border-l-2 border-dark px-2 font-semibold">
+            <p className="md:border-l-2 mb-4 md:mb-0 border-dark px-2 font-semibold">
               Date (dd/mm/yy): {date.getDate()} / {date.getMonth() + 1} / {date.getFullYear()}
-            </span>
+            </p>
           )}
         </div>
       )}

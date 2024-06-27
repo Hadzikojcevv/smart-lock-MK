@@ -54,10 +54,10 @@ class Order {
 const CheckoutForm = ({ lock, lang }: CheckoutFormPropsType) => {
   const [quantity, setQuantity] = useState(1);
   const [phoneNum, setPhoneNum] = useState("");
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(lock.price * quantity);
   const router = useRouter();
-  const [state, handleSubmit] = useForm("xjvnrjzk");
-  // const [state, handleSubmit] = useForm("mrgwnngw");
+  // const [state, handleSubmit] = useForm("xjvnrjzk");
+  const [state, handleSubmit] = useForm("mrgwnngw");
 
   const nameRef = useRef<HTMLInputElement>(null);
   const lastNameRef = useRef<HTMLInputElement>(null);
@@ -172,9 +172,9 @@ const CheckoutForm = ({ lock, lang }: CheckoutFormPropsType) => {
 
               if (
                 isNaN(e.currentTarget.valueAsNumber) ||
-                e.currentTarget.valueAsNumber === 0
+                e.currentTarget.valueAsNumber === 1
               ) {
-                setQuantity(1);
+                setQuantity(e.currentTarget.valueAsNumber);
               } else {
                 setQuantity(e.currentTarget.valueAsNumber);
               }
@@ -232,7 +232,8 @@ const CheckoutForm = ({ lock, lang }: CheckoutFormPropsType) => {
           <p>
           {lang?.checkout?.total ?? "Total"}:
             <span className="text-4xl">
-              {(lock.price * quantity).toLocaleString("en-EN")}{" "}
+              {isNaN((lock.price * quantity)) ? lock.price.toLocaleString('en-EN') : (lock.price * quantity).toLocaleString("en-EN")}
+              
             </span>{" "}
             mkd
           </p>
