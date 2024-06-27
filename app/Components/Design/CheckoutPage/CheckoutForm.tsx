@@ -56,8 +56,8 @@ const CheckoutForm = ({ lock, lang }: CheckoutFormPropsType) => {
   const [phoneNum, setPhoneNum] = useState("");
   const [totalPrice, setTotalPrice] = useState(lock.price * quantity);
   const router = useRouter();
-  // const [state, handleSubmit] = useForm("xjvnrjzk");
-  const [state, handleSubmit] = useForm("mrgwnngw");
+  const [state, handleSubmit] = useForm("xjvnrjzk");
+  // const [state, handleSubmit] = useForm("mrgwnngw");
 
   const nameRef = useRef<HTMLInputElement>(null);
   const lastNameRef = useRef<HTMLInputElement>(null);
