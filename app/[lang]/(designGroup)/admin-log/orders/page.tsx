@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
 import Listing from "@/app/Components/Design/AdminPanel/Listing";
 import { OrderType } from "@/app/Types/types";
-import { redirect, useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 
 // const filters = [
@@ -31,30 +31,11 @@ const OrdersPage = () => {
   const [orders, setOrders] = useState<OrderType[]>([]);
   const [filterQuery, setFilterQuery] = useState<"" | true | false>("");
   const [status, setStatus] = useState(true);
-  // const user = sessionStorage.getItem('access')
-  const [isClient, setIsClient] = useState(false);
-  const router = useRouter();
-
-  const [valid, setValid] = useState(false)
-
+  const [access, setAccess] = useState(false)
+  
   const changeStatus = () => {
     setStatus(!status);
   };
-
-  useEffect(() => {
-    setIsClient(true);
-
-    if (typeof window !== 'undefined') {
-      const token = sessionStorage.getItem('access');
-      if (!token) {
-        // If no token is found, redirect to login page
-        router.push("https://www.smartlocks.mk/en/admin-log");
-      } else {
-        // Fetch orders or set orders from sessionStorage
-        setValid(true)
-      }
-    }
-  }, []);
 
   useEffect(() => {
     fetch(
@@ -66,10 +47,19 @@ const OrdersPage = () => {
       .then((data) => {
         setOrders(data);
       });
-  }, [filterQuery, status]);
+      
+      const user = sessionStorage.getItem('access')
+
+      if(user) {
+
+        setAccess(true)
+      }
+      
+  }, [filterQuery, status, access]);
+
 
   
-  if (valid) {
+  if (access) {
     return (
       <section className="flex flex-col">
         <div className=" bg-lightestdark">
