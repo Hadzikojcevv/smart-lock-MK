@@ -1,38 +1,19 @@
 "use client";
 
 import Listing from "@/app/Components/Design/AdminPanel/Listing";
+import { LoginContext } from "@/app/LoginContext/LoginContext";
 import { OrderType } from "@/app/Types/types";
 import { redirect } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
-// const filters = [
-//   {
-//     text: "All",
-//     filter: "",
-//   },
-//   {
-//     text: "Finished",
-//     filter: true,
-//   },
-//   {
-//     text: "Pending",
-//     filter: false,
-//   },
-// ];
-
-// const users = [
-//   {
-//     user: "Vlatko",
-//     pass: "locks@gvg",
-//   },
-// ];
 
 const OrdersPage = () => {
   const [orders, setOrders] = useState<OrderType[]>([]);
   const [filterQuery, setFilterQuery] = useState<"" | true | false>("");
   const [status, setStatus] = useState(true);
-  const [access, setAccess] = useState(false)
-  
+
+  const { access } = useContext(LoginContext);
+
   const changeStatus = () => {
     setStatus(!status);
   };
@@ -47,18 +28,8 @@ const OrdersPage = () => {
       .then((data) => {
         setOrders(data);
       });
-      
-      const user = sessionStorage.getItem('access')
+  }, [filterQuery, status]);
 
-      if(user) {
-
-        setAccess(true)
-      }
-      
-  }, [filterQuery, status, access]);
-
-
-  
   if (access) {
     return (
       <section className="flex flex-col">
@@ -108,6 +79,6 @@ const OrdersPage = () => {
     );
   }
 
-  // return redirect("https://www.smartlocks.mk/en/admin-log");
+  return redirect("https://www.smartlocks.mk/en/admin-log");
 };
 export default OrdersPage;

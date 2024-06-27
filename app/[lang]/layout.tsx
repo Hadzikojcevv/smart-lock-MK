@@ -5,6 +5,7 @@ import { Locale, i18n } from "@/i18n.config";
 
 import { Inter } from "next/font/google";
 import Footer from "../Components/Design/Footer/Footer";
+import LoginProvider from "../LoginContext/LoginProvider";
 // import Footer from '../Components/Footer/Footer'
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang={params.lang}>
       <body className={inter.className}>
-        {children}
+        <LoginProvider>{children}</LoginProvider>
         <Footer lang={params.lang} />
       </body>
     </html>

@@ -1,7 +1,8 @@
 "use client";
+import { LoginContext } from "@/app/LoginContext/LoginContext";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 export const admin = {
   user: "Vlatko",
@@ -15,11 +16,14 @@ const LoginForm = () => {
   const [isMessageShown, setIsMessageShows] = useState(false);
   const router = useRouter();
 
+  const {changeAccess} = useContext(LoginContext)
+
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (pass === admin.pass) {
-      sessionStorage.setItem("access", user);
+
+      changeAccess()
 
       router.push("https://www.smartlocks.mk/en/admin-log/orders");
     } else {
