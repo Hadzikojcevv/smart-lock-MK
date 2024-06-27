@@ -97,6 +97,6 @@ const OrdersPage = () => {
     );
   }
 
-  return redirect("http://localhost:3000/en/admin-log");
+  return redirect("https://www.smartlocks.mk/en/admin-log");
 };
 export default OrdersPage;
