@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import Listing from "@/app/Components/Design/AdminPanel/Listing";
 import { OrderType } from "@/app/Types/types";
@@ -31,22 +31,13 @@ const OrdersPage = () => {
   const [orders, setOrders] = useState<OrderType[]>([]);
   const [filterQuery, setFilterQuery] = useState<"" | true | false>("");
   const [status, setStatus] = useState(true);
-  const [user, setUser] = useState('')
+  const user = sessionStorage.getItem('access')
 
   const changeStatus = () => {
     setStatus(!status);
   };
 
   useEffect(() => {
-
-    const user = sessionStorage.getItem("access");
-    if (!user) {
-      // Redirect to login page if access token is not present
-      return redirect("https://www.smartlocks.mk/en/admin-log");
-    }else {
-
-      setUser("Vlatko")
-    }
 
     fetch(
       `https://smartlocksmkdata.glitch.me/orders${
@@ -59,7 +50,7 @@ const OrdersPage = () => {
       });
   }, [filterQuery, status]);
 
-  if (user == 'Vlatko') {
+  if (user) {
     return (
       <section className="flex flex-col">
         <div className=" bg-lightestdark">
@@ -108,6 +99,6 @@ const OrdersPage = () => {
     );
   }
 
-  return redirect("https://www.smartlocks.mk/en/admin-log");
+  return redirect("http://localhost:3000/en/admin-log");
 };
 export default OrdersPage;

@@ -19,11 +19,9 @@ const LoginForm = () => {
     e.preventDefault();
 
     if (pass === admin.pass) {
-      if (typeof window !== "undefined") {
-        sessionStorage.setItem("access", user);
+      sessionStorage.setItem("access", user);
 
-        router.push("https://www.smartlocks.mk/en/admin-log/orders");
-      }
+      router.push("http://localhost:3000/en/admin-log/orders");
     } else {
       setIsMessageShows(true);
     }
