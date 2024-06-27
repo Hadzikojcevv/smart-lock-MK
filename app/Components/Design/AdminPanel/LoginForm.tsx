@@ -21,7 +21,7 @@ const LoginForm = () => {
     if (pass === admin.pass) {
       sessionStorage.setItem("access", user);
 
-      router.push("http://localhost:3000/en/admin-log/orders");
+      router.push("https://www.smartlocks.mk/en/admin-log/orders");
     } else {
       setIsMessageShows(true);
     }

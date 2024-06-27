@@ -1,7 +1,13 @@
 
-import LoginForm from '@/app/Components/Design/AdminPanel/LoginForm'
+// import LoginForm from '@/app/Components/Design/AdminPanel/LoginForm'
 import Image from 'next/image'
 import React from 'react'
+
+import dynamic from 'next/dynamic'
+ 
+const LoginForm = dynamic(() => import('@/app/Components/Design/AdminPanel/LoginForm'), {
+  ssr: false,
+})
 
 const LoginPage = () => {
   return (
