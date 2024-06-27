@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Listing from "@/app/Components/Design/AdminPanel/Listing";
 import { OrderType } from "@/app/Types/types";
@@ -31,15 +31,19 @@ const OrdersPage = () => {
   const [orders, setOrders] = useState<OrderType[]>([]);
   const [filterQuery, setFilterQuery] = useState<"" | true | false>("");
   const [status, setStatus] = useState(true);
-  let user = sessionStorage.getItem('access')
-
+  const [user, setUser] = useState<string | null>("");
 
   const changeStatus = () => {
     setStatus(!status);
   };
 
   useEffect(() => {
+    if (window) {
+      setUser(sessionStorage?.getItem("access"));
+    }
+  }, []);
 
+  useEffect(() => {
     fetch(
       `https://smartlocksmkdata.glitch.me/orders${
         filterQuery !== "" ? `?isFinished=${filterQuery}` : ""
@@ -51,7 +55,7 @@ const OrdersPage = () => {
       });
   }, [filterQuery, status]);
 
-  if (user) {
+  if (user !== "undefined") {
     return (
       <section className="flex flex-col">
         <div className=" bg-lightestdark">
