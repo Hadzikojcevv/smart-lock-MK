@@ -1,3 +1,4 @@
+'use client'
 import LoginForm from '@/app/Components/Design/AdminPanel/LoginForm'
 import Image from 'next/image'
 import React from 'react'
