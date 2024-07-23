@@ -27,7 +27,7 @@ const ProductCard = ({ product, color = "light" }: ProductCardPropsType) => {
         className={`relative flex justify-between items-center py-12 pl-4 pr-2 rounded-md shadow-xl ${
           color === "light" ? "bg-lightestdark" : "bg-lightDark"
         } `}
-        style={{ border: "1px solid #3A3C41", minHeight: "300px" }}
+        style={{ minHeight: "300px" }}
       >
         <div
           className={`${

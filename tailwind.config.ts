@@ -11,7 +11,7 @@ const config: Config = {
       'custom': "#526AC2",
       'dark': "#474C57",
       "lightestdark":"#edededcb",
-      'lightDark': "#6A707C",
+      'lightDark': "#9da5b4eb",
       "footerDark": "#474C57",
       'bg-light': "#E9E9EA",
       'redesignWhite': "#FFFFFF",
