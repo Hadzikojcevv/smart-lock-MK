@@ -87,8 +87,8 @@ const features: FeatureCardType[] = [
     desc2: "USB Приклучок",
     desc2Eng: "Emergency USB Power",
 
-    desc3: "Далечинско Отклучување пореку телефон",
-    desc3Eng: "Remote Unlock From Phone",
+    desc3: "Далечинско Отклучување",
+    desc3Eng: "Remote Unlock",
 
   },
 ];
